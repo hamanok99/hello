@@ -8,3 +8,6 @@
  <?php echo '<p>OK</p>'; ?>
  </body>
 </html>
+<?php
+file_put_contents("sample.txt", "HELLO WORLD");
+?>
