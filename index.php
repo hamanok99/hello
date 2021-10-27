@@ -1,3 +1,6 @@
+<?php
+file_put_contents("sample.txt", "HELLO WORLD!!");
+?>
 <html>
  <head>
   <title>PHP Test</title>
