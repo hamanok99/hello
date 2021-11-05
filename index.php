@@ -17,8 +17,8 @@ var_dump($pdo->getAttribute(PDO::ATTR_SERVER_VERSION));
 //$sql = "INSERT INTO public.test(id, name, email, age, designation, created) VALUES (1, '山田', 'yamada@gmail.com', 19, 'エンジニア', current_timestamp);";
 //$pdo->exec ($sql);
 
-$sql = "select * from public.test";
-foreach ($dbh->query($sql) as $row) {
+$sql = 'select * from public.test';
+foreach ($pdo->query($sql) as $row) {
     echo $row['id'];
     echo $row['name'];
     echo $row['email'];
