@@ -3,49 +3,10 @@
   <title>PHP Test</title>
  </head>
  <body>
+ <form action="index.php" method="post">
+ <input type="text" name="name" class="form-text" value="">
+ </form>
  <?php echo '<p>こんにちは世界</p>'; ?>
+ <?php echo var_dump(isset($_POST["name"])); ?>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
-
-$url = parse_url(getenv('DATABASE_URL'));
-$dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
-$pdo = new PDO($dsn, $url['user'], $url['pass']);
-
-//$sql = "INSERT INTO public.test(id, name, email, age, designation, created) VALUES (1, '山田', 'yamada@gmail.com', 19, 'エンジニア', current_timestamp);";
-//$pdo->exec ($sql);
-/*
-$sql = 'select * from public.test';
-foreach ($pdo->query($sql) as $row) {
-    echo $row['id'];
-    echo $row['name'];
-    echo $row['email'];
-    echo $row['age'];
-    echo $row['designation'];
-    echo $row['created'];
-}
-*/
-?>
